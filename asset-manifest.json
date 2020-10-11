@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/test-girlhack/static/css/main.bccb7007.chunk.css",
+    "main.js": "/test-girlhack/static/js/main.3837c2f1.chunk.js",
+    "main.js.map": "/test-girlhack/static/js/main.3837c2f1.chunk.js.map",
+    "runtime-main.js": "/test-girlhack/static/js/runtime-main.4b864778.js",
+    "runtime-main.js.map": "/test-girlhack/static/js/runtime-main.4b864778.js.map",
+    "static/js/2.7bd428ab.chunk.js": "/test-girlhack/static/js/2.7bd428ab.chunk.js",
+    "static/js/2.7bd428ab.chunk.js.map": "/test-girlhack/static/js/2.7bd428ab.chunk.js.map",
+    "index.html": "/test-girlhack/index.html",
+    "precache-manifest.bf05c3fdd8d553a138631df583184aff.js": "/test-girlhack/precache-manifest.bf05c3fdd8d553a138631df583184aff.js",
+    "service-worker.js": "/test-girlhack/service-worker.js",
+    "static/css/main.bccb7007.chunk.css.map": "/test-girlhack/static/css/main.bccb7007.chunk.css.map",
+    "static/js/2.7bd428ab.chunk.js.LICENSE.txt": "/test-girlhack/static/js/2.7bd428ab.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4b864778.js",
+    "static/js/2.7bd428ab.chunk.js",
+    "static/css/main.bccb7007.chunk.css",
+    "static/js/main.3837c2f1.chunk.js"
+  ]
+}
