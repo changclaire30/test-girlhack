@@ -9,6 +9,7 @@ function App() {
 
   const [age, setAge] = useState("20");
   const [gender, setGender] = useState("male");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     getTopics();
@@ -28,17 +29,17 @@ function App() {
     // e.preventDefault();
     setGender(e.target.value);
   }
-  const getSearch = e => {
-    e.preventDefault();
-    setAge(age);
-    setGender(gender);
-  } 
+  const topicChange = e => {
+    setSearch(e.target.value);
+  };
+
+  const filteredTopics = topics.filter(topic => 
+    topic.Title.toLowerCase().includes(search.toLowerCase())
+    );
 
   return (
     <div className="App">
       <h1 className="title">MyHealthFinder</h1>
-      {/* form */}
-      {/* <form onSubmit={getSearch} className="search-form"> */}
       <div className="search-form">
         <div className="search-age">
           <h3>Age</h3>
@@ -47,7 +48,6 @@ function App() {
         </div>
         <div className="search-gender" >
           <h3>Gender</h3>
-          {/* <input type="text" value={gender} onChange={updateGender} /> */}
 
           <div className="buttons-gender" onChange={updateGender}>
             <input type="radio" value="male" name="gender" id="radio1" />
@@ -56,17 +56,18 @@ function App() {
             <label for="radio2" className="radio-button">Female</label>
           </div>
         </div>
-        </div>
-        {/* <div>
-          <button>Submit</button>
-        </div> */}
-      {/* </form> */}
+      </div>
 
-
+      <div className="search-topic">
+        <p>Search <input className="search-bar" type="text" placeholder="topic" onChange={topicChange} /> for {age}-year-old {gender}</p>
+        
+      </div>
+      
       <div className="topic-section">
-        {topics && topics.map(topic => (
+        {filteredTopics.map(topic => (
           <Topic
           Title = {topic.Title}
+          MyHFDescription = {topic.MyHFDescription}
           // ImageUrl = {topic.ImageUrl}
           AccessibleVersion = {topic.AccessibleVersion} />
         ))}
